@@ -83,6 +83,27 @@
 			);
 			const n = sum(weights);
 			return Math.exp(acc / n);
+		},
+		
+		Lehmer(
+			nums, weights = null, p = 2
+		) {
+			weights = getWeights(
+				weights, nums.length
+			);
+			const nom = sum(nums, (x,i) => {
+				return (x**p) * weights[i];
+			});
+			const den = sum(nums, (x,i) => {
+				return (x**(p-1)) * weights[i];
+			});
+			return nom/den;
+		},
+		
+		contraharmonic(
+			nums, weights = null
+		) {
+			return mean.Lehmer(nums,weights,2);
 		}
 	};
 	
