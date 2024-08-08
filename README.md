@@ -9,3 +9,5 @@
 - `power(numbers, weights = null, power)`
 - `root(numbers, weights = null, degree = 2)`
 - `logarithmic(numbers, weights = null, base = Math.E)`
+- `contraharmonic(numbers, weights = null)`
+- `Lehmer(numbers, weights = null, p = 2)`
