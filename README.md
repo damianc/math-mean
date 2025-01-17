@@ -59,3 +59,11 @@ $$
 $$
 \frac{\sum x^p}{\sum x^{p-1}}
 $$
+
+- `f(numbers, weights = null, fn, inverseFn)`
+
+$$
+f^{-1}\left(
+\frac{1}{n} \sum f(x)
+\right)
+$$
