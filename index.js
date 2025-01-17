@@ -104,6 +104,24 @@
 			nums, weights = null
 		) {
 			return mean.Lehmer(nums,weights,2);
+		},
+
+		f(
+			nums,
+			weights = null,
+			fn = x => x,
+			invFn = x => x
+		) {
+			weights = getWeights(
+				weights, nums.length
+			);
+
+			const nom = sum(nums, (x,i) => {
+				return fn(x) * weights[i];
+			});
+			const den = sum(weights);
+
+			return invFn(nom/den);
 		}
 	};
 	
